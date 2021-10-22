@@ -1,4 +1,4 @@
-import { Company, Gender, Person, Role } from "../1. Typescript esercizio 1/start"
+import { Company, Gender, Person, Role, Address} from "../1. Typescript esercizio 1/start"
 
 class User implements Person {
  
@@ -11,7 +11,7 @@ class User implements Person {
         public surname: string,
         public age: number,
         public dateOfBirth: string,
-        public address: { city: string; street: string; postalCode: string; },
+        public address: Address,
         public role: Role,
         public username: string,
         public profilePhotoUrl: string,
@@ -19,7 +19,7 @@ class User implements Person {
         public gender: Gender){}
 }
 
-const mario = new User (3487,
+const obj1 = new User (3487,
     'Mario',
     'Rossi',
     25,
@@ -29,7 +29,7 @@ const mario = new User (3487,
         street: 'Via roma 10',
         postalCode: '00100'
     },
-    'staff', // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
+    Role.staff, // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
     'MarioRossi80',
     'https://bit.ly/3yRngEP',
     [
@@ -56,4 +56,4 @@ const mario = new User (3487,
 	],
     Gender.male)
 
-console.log(mario.fullName());
+console.log(obj1.fullName());

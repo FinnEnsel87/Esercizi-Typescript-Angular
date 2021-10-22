@@ -1,16 +1,35 @@
 // rivedere enum
-// address e location interfaces
-export type Role = 'staff' | 'student' | 'manager' | 'admin'
-export enum Gender {male, female, other}
+// address e location interface
+
+export enum Role {
+    staff = "staff",
+    student = "student",
+    manager = "manager",
+    admin = "admin",
+}
+
+export enum Gender {
+    male = "male",
+    female = "female",
+    other = "other",
+}
+
+export interface Address {
+    city: string,
+    street: string,
+    postalCode: string 
+}
+
+export interface Location {
+    city: string,
+    street: string,
+    postalCode: string
+}
 export interface Company {
     id: number,
     name: string,
     description: string,
-    location: {
-        city: string,
-        street: string,
-        postalCode: string
-    }
+    location: Location
 }
 export interface Person {
     id: number,
@@ -18,11 +37,7 @@ export interface Person {
     surname: string,
     age: number,
     dateOfBirth: string,
-    address: {
-        city: string,
-        street: string,
-        postalCode: string 
-    },
+    address: Address,
     role: Role,
     username: string,
     profilePhotoUrl: string,
@@ -44,7 +59,7 @@ const obj: Person = {
         street: 'Via roma 10',
         postalCode: '00100'
     },
-    role: 'staff', // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
+    role: Role.staff, // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
     username: 'MarioRossi80',
     profilePhotoUrl: 'https://bit.ly/3yRngEP',
     companies: [

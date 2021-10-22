@@ -1,11 +1,20 @@
 "use strict";
+// rivedere enum
+// address e location interface
 exports.__esModule = true;
-exports.Gender = void 0;
+exports.Gender = exports.Role = void 0;
+var Role;
+(function (Role) {
+    Role["staff"] = "staff";
+    Role["student"] = "student";
+    Role["manager"] = "manager";
+    Role["admin"] = "admin";
+})(Role = exports.Role || (exports.Role = {}));
 var Gender;
 (function (Gender) {
-    Gender[Gender["male"] = 0] = "male";
-    Gender[Gender["female"] = 1] = "female";
-    Gender[Gender["other"] = 2] = "other";
+    Gender["male"] = "male";
+    Gender["female"] = "female";
+    Gender["other"] = "other";
 })(Gender = exports.Gender || (exports.Gender = {}));
 // obj dato
 var obj = {
@@ -19,7 +28,7 @@ var obj = {
         street: 'Via roma 10',
         postalCode: '00100'
     },
-    role: 'staff',
+    role: Role.staff,
     username: 'MarioRossi80',
     profilePhotoUrl: 'https://bit.ly/3yRngEP',
     companies: [

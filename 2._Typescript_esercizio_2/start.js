@@ -20,11 +20,11 @@ var User = /** @class */ (function () {
     };
     return User;
 }());
-var mario = new User(3487, 'Mario', 'Rossi', 25, '1995-14-12', {
+var obj1 = new User(3487, 'Mario', 'Rossi', 25, '1995-14-12', {
     city: 'Roma',
     street: 'Via roma 10',
     postalCode: '00100'
-}, 'staff', // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
+}, start_1.Role.staff, // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
 'MarioRossi80', 'https://bit.ly/3yRngEP', [
     {
         id: 148979,
@@ -47,4 +47,4 @@ var mario = new User(3487, 'Mario', 'Rossi', 25, '1995-14-12', {
         }
     }
 ], start_1.Gender.male);
-console.log(mario.fullName());
+console.log(obj1.fullName());

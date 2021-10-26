@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     width: 100%;
     height: 100%;
@@ -22,16 +27,18 @@ es3-user-container {
 }
 es3-user-list{
     background-color: #D5E7D4;
-    padding: 2rem;
     border: 1px solid #98C08D;
-    flex: 1.5;
-    flex-grow: inherit;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
 }
 es3-user-detail{
     border: 1px solid #D7C282;
     background-color: #FFF1CC;
     padding: 2rem;
+    width: 50%;
 }
+
 es3-order-container{
     width: 50%;
     padding: 2rem;

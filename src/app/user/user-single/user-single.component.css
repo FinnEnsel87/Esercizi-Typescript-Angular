@@ -1,5 +1,7 @@
-p{  
-    border: 1px solid #D7AE4C;
-    background-color: #FFE6CC;
-    padding: .4rem 5.5rem;
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: .5rem;
+    margin-top: 1rem;
 }

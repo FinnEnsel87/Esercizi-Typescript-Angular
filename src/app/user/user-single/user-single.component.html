@@ -1,1 +1,7 @@
-<p>{{ user }}</p>
+<div class="user">
+    <span><img [src]="user.profilePhotoUrl" width="80px"></span>
+    <span><b>{{ user.name }}</b></span>
+    <span><b>{{ user.surname }}</b></span>
+    <span style="font-size: medium;">{{ user.age }}</span>
+    <span style="font-size: medium;">{{ user.address.city }}</span>
+</div>

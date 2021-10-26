@@ -19,7 +19,7 @@ export class UserDetailComponent implements OnInit {
           street: 'Via roma 10',
           postalCode: '00100'
       },
-      role: Role.staff,
+      role: Role.STAFF,
       username: 'MarioRossi80',
       profilePhotoUrl: 'https://bit.ly/3yRngEP',
       companies: [
@@ -44,7 +44,7 @@ export class UserDetailComponent implements OnInit {
               }
           }
     ],
-      gender: Gender.male  // Generi possibili: 'male', 'female', 'other'
+      gender: Gender.MALE  // Generi possibili: 'male', 'female', 'other'
   }
 
   constructor() { }

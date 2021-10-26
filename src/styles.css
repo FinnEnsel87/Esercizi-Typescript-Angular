@@ -17,6 +17,7 @@ es3-user-container {
     background-color: #DAE8FC;
     border: solid 1px #8FA8CC;
     display: flex;
+    justify-content: space-evenly;
     gap: 1rem;
     padding: 3rem 1rem;
 }

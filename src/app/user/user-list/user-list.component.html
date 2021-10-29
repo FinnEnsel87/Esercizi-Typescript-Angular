@@ -1,1 +1,6 @@
-<es3-user-single *ngFor="let user of users" [user]="user"></es3-user-single>
+<ol>
+    <!-- [proprietà destinata al figlio]="proprietà origine dal padre" -->
+    <li *ngFor="let person of persons">
+        <es3-user-single [user]="person"></es3-user-single>
+    </li>
+</ol>

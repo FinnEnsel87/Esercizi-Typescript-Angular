@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Gender, Role, User } from 'src/app/models/User';
+import { User, Role, Gender } from 'src/app/models/User';
 
 @Component({
   selector: 'es3-user-detail',
@@ -7,6 +7,7 @@ import { Gender, Role, User } from 'src/app/models/User';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
+
 
   obj: User = {
     id: 3487,
@@ -46,6 +47,7 @@ export class UserDetailComponent implements OnInit {
     ],
       gender: Gender.MALE  // Generi possibili: 'male', 'female', 'other'
   }
+
 
   constructor() { }
 

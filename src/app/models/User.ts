@@ -1,15 +1,15 @@
 
 export enum Role {
-    staff = "staff",
-    student = "student",
-    manager = "manager",
-    admin = "admin",
+    STAFF = "staff",
+    STUDENT = "student",
+    MANAGER = "manager",
+    ADMIN = "admin",
 }
 
 export enum Gender {
-    male = "male",
-    female = "female",
-    other = "other",
+    MALE = "male",
+    FEMALE = "female",
+    OTHER = "other",
 }
 
 export interface Address {

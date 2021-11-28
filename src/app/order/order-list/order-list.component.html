@@ -1,1 +1,5 @@
-<es3-order-single *ngFor="let user of users" [user]="user"></es3-order-single>
+<ol>
+    <li *ngFor="let user of users">
+        <es3-order-single [user]="user"></es3-order-single>
+    </li>
+</ol>

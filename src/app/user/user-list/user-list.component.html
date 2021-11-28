@@ -1,6 +1,14 @@
-<ol>
+<div *ngIf="persons.length > 0; else noUsers">
+    <ol>
     <!-- [proprietà destinata al figlio]="proprietà origine dal padre" -->
-    <li *ngFor="let person of persons">
-        <es3-user-single [user]="person" (deleteUser)="deleteUser.emit($event)"></es3-user-single>
-    </li>
-</ol>
+        <li *ngFor="let person of persons">
+            <es3-user-single [user]="person" (deleteUser)="deleteUser.emit($event)"></es3-user-single>
+        </li>
+    </ol>
+</div>
+<ng-template #noUsers>
+    <div class="col-12">
+      <h2>Non sono presenti utenti</h2>
+    </div>
+  </ng-template>
+  

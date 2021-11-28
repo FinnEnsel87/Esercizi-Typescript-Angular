@@ -3,13 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    font-size: 1.3em;
-}
-.container{
+.app-container{
     display: flex;
     width: 98vw;
     

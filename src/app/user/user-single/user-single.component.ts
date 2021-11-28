@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/models/User';
 
 @Component({
@@ -9,7 +9,9 @@ import { User } from 'src/app/models/User';
 export class UserSingleComponent implements OnInit {
   // decoratore per passare dei dati dal padre al figlio (univocamente)
   // si crea una "proprietà" assegnando il tipo e 
-  @Input()user!:User
+  @Input() user!: User
+  @Output() deleteUser = new EventEmitter<User>();
+  
   constructor() { }
 
   ngOnInit(): void {

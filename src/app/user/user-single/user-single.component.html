@@ -4,4 +4,5 @@
     <span><b>{{ user.surname }}</b></span>
     <span style="font-size: medium;">{{ user.age }}</span>
     <span style="font-size: medium;">{{ user.address.city }}</span>
+    <button class="btn btn-secondary" (click)="deleteUser.emit(user)">Delete</button>
 </div>

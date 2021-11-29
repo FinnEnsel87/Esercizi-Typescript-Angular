@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'es3-order-list',
@@ -6,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
-
+  @Input() users!: User[];
   constructor() { }
-  users: string[] = ["user1", "user2", "user3"]
   ngOnInit(): void {
   }
 

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'es3-order-single',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./order-single.component.css']
 })
 export class OrderSingleComponent implements OnInit {
-  @Input() user!:string 
+  @Input() user!: User;
   constructor() { }
   ngOnInit(): void {
   }

@@ -59,7 +59,6 @@ export class UserListComponent implements OnInit {
   ];
   constructor() { }
 
-  users: string[] = ["user1", "user2", "user3"]
   ngOnInit(): void {
   }
 

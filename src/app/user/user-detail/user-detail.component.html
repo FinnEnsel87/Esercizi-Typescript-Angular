@@ -1,1 +1,21 @@
-<p>user-detail.component</p>
+<p>id: {{ obj.id }}</p>
+<p>name: {{ obj.name }}</p>
+<p>surname: {{ obj.surname }}</p>
+<p>age: {{ obj.age }}</p>
+<!-- pipe | -->
+<p>dateOfBirth: {{ obj.dateOfBirth | date:"dd MMM yyyy"}}</p>
+<p><b>Address:</b></p>
+<p>city: {{ obj.address.city }}</p>
+<p>Street: {{ obj.address.street }}</p>
+<p>PostalCode: {{ obj.address.postalCode }}</p>
+<p>role: {{ obj.role }}</p>
+<p>Username: {{ obj.username }}</p>
+<!-- collegato attributo src ad una proprietà di un obj Typescript -->
+<img [src]="obj.profilePhotoUrl" width="150px">
+<p>Gender: {{ obj.gender }}</p>
+<!-- fare div per inserire ngFor da ciclare-->
+<div *ngFor="let company of obj.companies">
+    <p>Company: {{ company.name }}</p>
+    <p>Description: {{ company.description }}</p>
+</div>
+

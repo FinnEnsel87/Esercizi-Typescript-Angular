@@ -2,7 +2,13 @@
     <ol>
     <!-- [proprietà destinata al figlio]="proprietà origine dal padre" -->
         <li *ngFor="let person of persons">
-            <es3-user-single [user]="person" (deleteUser)="deleteUser.emit($event)"></es3-user-single>
+            <es3-user-single [ngClass]="{
+                'border-success' : person.role == 'staff',
+                'border-secondary' : person.role == 'manager',
+                'border-warning' : person.role == 'student',
+                'border-info' : person.role == 'admin'
+              }"
+             (deleteUser)="deleteUser.emit($event)" class="d-flex mt-3 border" [user]="person" ></es3-user-single>
         </li>
     </ol>
 </div>

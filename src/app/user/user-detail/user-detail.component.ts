@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { User, Role, Gender } from 'src/app/models/User';
-
 @Component({
   selector: 'es3-user-detail',
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
-
-
   obj: User = {
     id: 3487,
       name: 'Mario',
@@ -47,8 +44,6 @@ export class UserDetailComponent implements OnInit {
     ],
       gender: Gender.MALE  // Generi possibili: 'male', 'female', 'other'
   }
-
-
   constructor() { }
 
   ngOnInit(): void {
